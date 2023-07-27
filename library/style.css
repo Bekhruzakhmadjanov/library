@@ -459,7 +459,6 @@ p.book_description {
 
 .shop_menu {
     display: flex;
-    /* justify-content: space-around; */
     flex-direction: row;
     gap: 560px;
 
@@ -567,12 +566,6 @@ p.book_description {
     justify-content: space-between;
 }
 
-/* .contacts_left_side {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-} */
-
 .contacts_title {
     color: #000;
     font-family: Inter;
@@ -601,6 +594,10 @@ p.book_description {
     width: 696px;
     height: 414px;
     overflow: hidden;
+}
+
+.contacts_text a {
+    color: #000;
 }
 
 .map {
@@ -856,10 +853,6 @@ footer {
     padding: 0 20px;
 }
 
-/* .rs_school {
-    display: flex;
-    justify-content: center;
-} */
 
 .bottom p {
     color: #FFF;
