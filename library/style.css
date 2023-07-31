@@ -151,33 +151,58 @@ ul.nav {
     /* 200% */
 }
 
-.carousel {
-    display: flex;
-    justify-content: center;
-    background-repeat: repeat;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-.carousel_images {
-    display: flex;
-    transition: 0.5s;
-}
-
-.carousel_images img {
-    padding: 0 0 25px 20px;
-    width: 450px;
+.card {
     height: 560px;
-    flex-shrink: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 40px;
+    margin: 10px;
+    flex: 200px 0 0;
 }
 
-.svg_buttons {
+.cards img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.cards-wrapper {
+    display: flex;
+    transition: ease 0.5s;
+}
+
+.display-area {
+    width: 1410px;
+    overflow-x: hidden;
+    margin: auto;
+}
+
+.dots-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding-bottom: 40px;
+    margin: auto;
+    padding: 40px 0;
 }
+
+.dot {
+    border: none;
+    background: #0C0C0E;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+    border-radius: 50%;
+    outline: none;
+}
+
+.dot:hover {
+    background: #BB945F;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #BB945F;
+}
+
 
 
 /*********************************************/
