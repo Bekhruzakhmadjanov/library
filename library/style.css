@@ -82,21 +82,21 @@ ul.nav {
         opacity: 0;
     }
 
-    #nav_toggle:checked + .nav_btn > span {
+    #nav_toggle:checked+.nav_btn>span {
         transform: rotate(45deg);
     }
 
-    #nav_toggle:checked + .nav_btn > span::before {
+    #nav_toggle:checked+.nav_btn>span::before {
         top: 0;
         transform: rotate(0deg);
     }
 
-    #nav_toggle:checked + .nav_btn > span::after {
+    #nav_toggle:checked+.nav_btn>span::after {
         top: 0;
         transform: rotate(90deg);
     }
 
-    #nav_toggle:checked ~ .nav {
+    #nav_toggle:checked~.nav {
         left: 0 !important;
     }
 
@@ -110,9 +110,9 @@ ul.nav {
         z-index: 1;
     }
 
-    .nav_btn > span, 
-    .nav_btn > span::before, 
-    .nav_btn > span::after {
+    .nav_btn>span,
+    .nav_btn>span::before,
+    .nav_btn>span::after {
         display: block;
         position: absolute;
         width: 100%;
@@ -121,12 +121,12 @@ ul.nav {
         transition-duration: 0.25s;
     }
 
-    .nav_btn > span::before {
+    .nav_btn>span::before {
         content: '';
         top: -8px;
     }
 
-    .nav_btn > span::after {
+    .nav_btn>span::after {
         content: '';
         top: 8px;
     }
@@ -299,6 +299,8 @@ ul.nav {
 .dot.active {
     background: #BB945F;
 }
+
+@media (max-width:1420px) {}
 
 
 
