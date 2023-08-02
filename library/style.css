@@ -53,12 +53,15 @@ body {
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
-    line-height: 50px;
-    /* 250% */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 40px;
+}
+
+.nav_img {
+    width: 28px;
+    height: 28px;
 }
 
 ul.nav {
@@ -70,75 +73,97 @@ ul.nav {
     height: 28px;
 }
 
-.header-right-side .nav-btn {
+#nav_toggle {
     display: none;
 }
 
-.header-right-side #nav-check {
-    display: none;
+@media (max-width:1040px) {
+    #nav_toggle {
+        opacity: 0;
+    }
+
+    #nav_toggle:checked + .nav_btn > span {
+        transform: rotate(45deg);
+    }
+
+    #nav_toggle:checked + .nav_btn > span::before {
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    #nav_toggle:checked + .nav_btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+
+    #nav_toggle:checked ~ .nav {
+        left: 0 !important;
+    }
+
+    .nav_btn {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .nav_btn > span, 
+    .nav_btn > span::before, 
+    .nav_btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #FFF;
+        transition-duration: 0.25s;
+    }
+
+    .nav_btn > span::before {
+        content: '';
+        top: -8px;
+    }
+
+    .nav_btn > span::after {
+        content: '';
+        top: 8px;
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 50%;
+        height: 350px;
+        margin: 0 0 0 50%;
+        padding: 80px 0;
+        background-color: #000;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+        transition-duration: .25s;
+    }
+
+    .nav_item {
+        display: block;
+        padding: 12px 24px;
+        color: #ffffff;
+        transition-duration: .25s;
+    }
+
+    .nav_item:hover {
+        background-color: #333;
+    }
+
+    .nav_img {
+        position: relative;
+        right: 220%;
+        z-index: 0;
+    }
 }
-
-@media (max-width:768px) {
-    .header-right-side  .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-
-    .header-right-side  .nav-btn  label {
-      display: flex;
-      flex-direction: column;
-      row-gap: 5px;
-      width: 50px;
-      height: 50px;
-      padding: 15px;
-      border: none;
-      border-top-right-radius: 10px;
-    }
-
-    .header-right-side  .nav-btn  label:hover,
-    .header-right-side  #nav-check:checked ~ .nav-btn  label {
-      background-color: rgba(0, 0, 0, 0.3);
-      cursor: pointer;
-    }
-
-    .header-right-side  .nav-btn  label  span {
-      display: block;
-      width: 25px;
-      height: 5px;
-      background-color: #eee;
-      border-radius: 5px;
-    }
-
-    .header-right-side  .nav {
-      position: absolute;
-      display: block;
-      width: 100%;
-      background-color: #333;
-      height: 0px;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      top: 50px;
-      left: 0px;
-    }
-
-    .header-right-side  .nav  a {
-      display: block;
-      width: 100%;
-      padding-left: 20px;
-    }
-    
-    .header-right-side  #nav-check:not(:checked) ~ .nav {
-      height: 0px;
-    }
-    
-    .header-right-side  #nav-check:checked ~ .nav {
-      height: 250px;
-      overflow-y: hidden;
-    }
-}
-
 
 
 /*********************************************/
@@ -220,7 +245,7 @@ ul.nav {
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
-    /* 200% */
+    padding: 0 20px;
 }
 
 .card {
@@ -531,6 +556,18 @@ p.book_description {
     cursor: pointer;
 }
 
+@media (max-width:1420px) {
+    .season_picker {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .favorits_items {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
 
 /*********************************************/
 
@@ -648,6 +685,13 @@ p.book_description {
     background: #BB945F;
 }
 
+@media (max-width:875px) {
+    .menu_right_side {
+        position: relative;
+        left: 45%;
+    }
+}
+
 
 /*********************************************/
 
@@ -700,6 +744,18 @@ p.book_description {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+@media (max-width:1240px) {
+    .contacts_content {
+        display: flex;
+        row-gap: 80px;
+    }
+
+    .contacts_right_side {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -877,6 +933,25 @@ p.book_description {
     background-color: #BB945F;
     border: none;
     transition: 0.5s;
+}
+
+@media (max-width:1105px) {
+    .library_card_content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .library_card_right_side {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center
+    }
+
+    p.get_card_text {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
