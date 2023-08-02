@@ -41,3 +41,27 @@ dots.forEach((dot, idx) => {
 
     });
 });
+
+
+// to get the smooth scroll when you click the nav 
+document.addEventListener('DOMContentLoaded', function() {
+    const smoothScrollLinks = document.querySelectorAll('.nav_item');
+
+    smoothScrollLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = link.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                const headerOffset = 20; // Adjust this value if you have a fixed header
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
