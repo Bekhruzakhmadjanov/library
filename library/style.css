@@ -507,7 +507,7 @@ p.book_description {
     margin: 0 0 15px 20px;
 }
 
-.buy_book a {
+.buy_book {
     color: #0C0C0E;
     text-align: center;
     font-family: Inter;
@@ -540,7 +540,7 @@ p.book_description {
     margin: 0 0 15px 20px;
 }
 
-.own_book a {
+.own_book {
     color: #BB945F;
     text-align: center;
     font-family: Inter;
@@ -926,8 +926,8 @@ p.book_description {
     border: 1px solid #0C0C0E;
 }
 
-.sign_up a,
-.log_in a {
+.sign_up,
+.log_in {
     color: #0C0C0E;
     font-family: Inter;
     font-size: 10px;
