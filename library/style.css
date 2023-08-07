@@ -80,6 +80,12 @@ ul.nav {
     display: none;
 }
 
+.nav a:hover,
+.header-left-side a:hover {
+    color: #BB945F;
+    transition: 0.3s;
+}
+
 @media (max-width:1040px) {
     #nav_toggle {
         opacity: 0;
@@ -753,6 +759,11 @@ p.book_description {
     object-fit: cover;
 }
 
+.contacts_text a:hover {
+    color: #BB945F;
+    transition: 0.3s;
+}
+
 @media (max-width:1240px) {
     .contacts_content {
         display: flex;
@@ -1045,6 +1056,11 @@ footer {
     line-height: 40px;
     /* 200% */
     letter-spacing: 2px;
+}
+
+.bottom a:hover {
+    color: #BB945F;
+    transition: 0.3s;
 }
 
 
