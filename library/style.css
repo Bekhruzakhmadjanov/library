@@ -172,6 +172,14 @@ ul.nav {
         right: 220%;
         z-index: 0;
     }
+
+    @media (max-width:440px) {
+        .header-left-side {
+            height: 100%;
+            width: 50%;
+            margin-top: 20px;
+        }
+    }
 }
 
 
@@ -217,6 +225,15 @@ ul.nav {
     height: 300px;
     flex-shrink: 0;
     background: linear-gradient(180deg, #0C0C0E 0%, #0C0C0E 0.01%, rgba(18, 18, 21, 0.10) 100%);
+}
+
+@media (max-width:775px) {
+    .welcome_text {
+        width: 80%;
+        height: 100%;
+        font-size: 30px;
+        padding: 30px 10px;
+    }
 }
 
 
@@ -576,6 +593,19 @@ p.book_description {
     .favorits_items {
         display: flex;
         justify-content: space-around;
+    }
+
+    @media (max-width: 650px) {
+        .first_book,
+        .second_book,
+        .third_book,
+        .fourth_book {
+            width: 90%;
+            height: 90%;
+        }
+
+        .book-img {
+        }
     }
 }
 
