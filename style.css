@@ -177,7 +177,10 @@ ul.nav {
         .header-left-side {
             height: 100%;
             width: 50%;
-            margin-top: 20px;
+        }
+
+        .header {
+            max-height: 140px;
         }
     }
 }
@@ -229,7 +232,7 @@ ul.nav {
 
 @media (max-width:775px) {
     .welcome_text {
-        width: 80%;
+        width: 94.8%;
         height: 100%;
         font-size: 30px;
         padding: 30px 10px;
@@ -283,8 +286,11 @@ ul.nav {
     flex: 200px 0 0;
 }
 
-.cards img {
+.card img {
     width: 100%;
+    object-fit: cover;
+    width: 450px;
+    height: 560px;
     object-fit: cover;
 }
 
@@ -326,7 +332,17 @@ ul.nav {
     background: #BB945F;
 }
 
-@media (max-width:1420px) {}
+@media (max-width:1420px) {
+    @media (max-width:400px) {
+        .card img{
+            width: 360px;
+        }
+
+        .cards-wrapper {
+            width: 400px;
+        }
+    }
+}
 
 
 
@@ -600,11 +616,35 @@ p.book_description {
         .second_book,
         .third_book,
         .fourth_book {
-            width: 90%;
-            height: 90%;
+            width: 80%;
+            height: 750px;
+            padding-left: 0;
         }
 
         .book-img {
+            height: 300px;
+            width: 200px;
+        }
+
+        .book_container {
+            width: 100%;
+            height: 750px;
+        }
+
+        p.book_description {
+            padding: 20px 20px 15px 20px;
+        }
+
+        .season_picker {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            width: 300px;
+            row-gap: 20px;
+        }
+
+        .season_picker .container {
+            padding: 0 10% 0 10%;
         }
     }
 }
@@ -732,6 +772,22 @@ p.book_description {
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-end;
+    }
+
+    @media (max-width:400px) {
+        .menu_price {
+            padding-left: 100px;
+        }
+    
+        .menu_left_side .menu_text::after {
+            right: -70px;
+            width: 30px;
+        }
+    
+        .menu_right_side .menu_text::after {
+            right: -70px;
+            width: 30px;
+        }
     }
 }
 
@@ -1001,6 +1057,30 @@ p.book_description {
     .get_card_text {
         text-align: center;
         width: 120%;
+    }
+
+    @media (max-width: 600px) {
+        .find_card_box {
+            width: 100%;
+            height: 85%;
+        }
+
+        .input_info_box {
+            width: 88%;
+            height: 75%;
+        }
+
+        .reader_name, .card_number {
+            width: 80%;
+        }
+
+        .library_card_content {
+            row-gap: 50px;
+        }
+
+        .get_card_text {
+            width: 100%;
+        }
     }
 }
 
